@@ -4,7 +4,8 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const address = document.querySelector('#address').value
     console.log(address)
-    fetch('http://localhost:3000/weather?address=' + address).then((response) => {
+    // Modificar para Heroku y nuestra maquina local
+    fetch('/weather?address=' + address).then((response) => {
         response.json().then((data) => {
             if(data.error){
                 document.getElementById('error').innerHTML = data.error
