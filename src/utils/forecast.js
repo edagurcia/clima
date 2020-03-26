@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if(body.error){
             callback('No encontramos la ciudad solicitada.', undefined)
         }else{
-            callback(undefined, body.daily.data[0].summary + ' Temperatura actual de ' + body.currently.temperature + ' grados C. Probabilidad de ' + body.currently.precipProbability + '% de lluvias.')
+            callback(undefined, body.daily.data[0].summary + ' Temperatura actual de ' + body.currently.temperature + ' grados C. La temperatura máxima sera de ' + body.daily.data[0].temperatureHigh + ' grados C. Con una temperatura mínima de ' + body.daily.data[0].temperatureLow + ' grados C. Probabilidad de ' + body.currently.precipProbability + '% de lluvias.')
         }
     })
 }
