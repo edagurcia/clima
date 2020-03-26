@@ -1,3 +1,4 @@
+// Creado por Edmundo Dominguez Agurcia
 const weatherForm = document.querySelector('form')
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
