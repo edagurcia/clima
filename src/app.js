@@ -86,6 +86,8 @@ app.get('*', (req, res) => {
 })
 
 // Servidor web con express
+// Se cambio a la variable port creada anteriormente para evitar errores en Heroku pero si se ejecuta local
+// utilizara el puerto 3000
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
 })
